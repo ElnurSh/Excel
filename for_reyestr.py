@@ -1,5 +1,5 @@
 import pandas as pd
-#elnur
+#elnur1987
 data = pd.read_excel('~/Desktop/NEZ-Reyestr-İyun-2022-01-.xlsx', sheet_name=None, usecols = "A,D,G,J", header = 5, nrows=0)
 text = []
 sheetnames = list(data.keys())
