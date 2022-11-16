@@ -1,4 +1,4 @@
-# копировать примечания ячеек в пустые ячейки
+# extract excel cell comment from one column (A) and insert to the other column (B) via python (openpyxl)
 
 from openpyxl import load_workbook
 
