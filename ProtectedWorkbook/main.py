@@ -10,11 +10,23 @@ stop_loop = 0
 
 def start_loop():
     try:
-        interval = input("Select interval between two numbers, e.g., 3-7: ")
-        interval = [int(item) for item in interval.split("-")]
+        print('In order to set the password length you need to select an interval')
+        interval1 = int(input("Input first number of interval: "))
     except:
         print("Apparently, your input data is not correct. Try again.")
-    for item in range(interval[0], interval[1]+1):
+        start_loop()
+    try:
+        interval2 = int(input("Input last number of interval: "))
+    except:
+        print("Apparently, your input data is not correct. Try again.")
+        start_loop()
+
+    if interval1>= interval2:
+        print("Apparently, your input data is not correct. Try again.")
+        start_loop()
+
+
+    for item in range(interval1, interval2+1):
         for password in product(possible_symbols, repeat=item):
             password = "".join(password)
             global stop_loop
